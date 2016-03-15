@@ -1,0 +1,115 @@
+@-ms-viewport{
+  width: device-width;
+}
+html {
+height: 100%;
+background:
+	repeating-linear-gradient(
+		45deg,
+		transparent,
+		transparent 1em,
+		moccasin 0,
+		moccasin 2em,
+		transparent 0,
+		transparent 3em,
+		powderblue 0,
+		powderblue 4em,
+		transparent 0,
+		transparent 5em,
+		lavender 0,
+		lavender 6em,
+		transparent 0,
+		transparent 7em,
+		beige 0,
+		beige 8em
+	),
+	repeating-linear-gradient(
+		-45deg,
+		transparent,
+		transparent 1em,
+		khaki 0,
+		khaki 2em,
+		transparent 0,
+		transparent 3em,
+		beige 0,
+		beige 4em,
+		transparent 0,
+		transparent 5em,
+		peachpuff 0,
+		peachpuff 6em
+	), whitesmoke;
+
+background-blend-mode: multiply;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-repeat: repeat;
+  -webkit-backface-visibility: hidden;
+}
+
+#form-container {
+  margin-bottom:20px;
+  border-radius:5px;
+  margin-left: auto;
+  margin-right: auto;
+	background: red;
+  width: 360px;
+  padding: 20px;
+  position: relative;
+  float: none;
+  background-color: #FFFFFF;
+}
+
+.form-title {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.form-sub-title {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  margin-top: 0px;
+}
+
+.form-group {
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 10px;
+	display: block;
+	margin-left: 60px;
+
+}
+
+.label {
+  font-weight: 600;
+}
+
+.form-control {
+  font-weight: 500;
+}
+
+.error {
+  color: rgb(211, 0, 0);
+  font-weight: 300;
+}
+
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  width: 60px;
+  margin-top: 20px;
+  margin-left: 140px;
+}
+
+pre {
+	padding: 20px;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+}

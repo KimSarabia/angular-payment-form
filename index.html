@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular Directives</title>
+     <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+     <script src="https://code.angularjs.org/1.3.0-beta.14/angular-messages.min.js"></script>
+     <script src="https://code.angularjs.org/1.3.0-beta.14/angular-messages.min.js"></script>
+     <script src="https://code.angularjs.org/1.3.0-beta.14/angular-sanitize.min.js"></script>
+
+     <script src="module.js"></script>
+     <script src="controller.js"></script>
+     <script src="services.js"></script>
+  </head>
+
+  <body ng-app = 'formApp' ng-controller='formCtrl'>
+    <body ng-controller="FormCtrl">
+      <form name="form" ng-submit="submitForm()" novalidate>
+        <div id="form-container">
+          <h1 class="form-title">You're On Your Way!</h1>
+          <h3 class="form-sub-title">Please proceed to checkout</h3>
+
+            <div class="form-group">
+              <label class="label" for="fname">First Name: </label>
+                <input type="text" class="form-control" name="fname" placeholder="First Name" ng-model="formData.fname" required ng-minlength="3" ng-maxlength="15" ng-focus>
+                  <div class="error" ng-show="form.fname.$invalid && form.fname.$dirty && !form.fname.$focused">
+                    <span ng-messages="form.fname.$error">
+      	      	        <div ng-message='required'>required</div>
+			                  <div ng-message='minlength'>Must be at least 3 characters.</div>
+                        <div ng-message='maxlength'>Cannot be longer than 20 characters.</div>
+                    </span>
+                  </div>
+            </div>
+      <div class="form-group">
+        <label class="label" for="lname">Last Name: </label>
+        <input type="text" class="form-control" name="lname" placeholder="Last Name" ng-model="formData.lname" required ng-minlength="3" ng-maxlength="15" ng-focus>
+        <div class="error" ng-show="form.lname.$invalid && form.lname.$dirty && !form.lname.$focused">
+          <span ng-messages="form.lname.$error">
+      	     <div ng-message='required'>required</div>
+			       <div ng-message='minlength'>Must be at least 3 characters.</div>
+             <div ng-message='maxlength'>Cannot be longer than 20 characters.</div>
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="label" for="email">Email:</label>
+        <input type="email" class="form-control" name="email" placeholder="Email" ng-model="formData.email" required ng-focus>
+        <div class="error" ng-show="form.email.$invalid && form.email.$dirty && !form.email.$focused">
+          <span ng-messages="form.fname.$error">
+      	    <div ng-message='required'>required</div>
+			      <div ng-message='minlength'>Must be at least 3 characters.</div>
+            <div ng-message='maxlength'>Cannot be longer than 20 characters.</div>
+          </span>
+        </div>
+      </div>
+      <button class="submit" type="submit" ng-disabled="formData.$invalid">Submit</button>
+      </div>
+      </form>
+      <pre>
+        {{ formData }}
+      </pre>
+</body>
+</html>

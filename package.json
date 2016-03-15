@@ -1,0 +1,22 @@
+{
+  "name": "ngforms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependenciwes": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.2"
+  }
+}
