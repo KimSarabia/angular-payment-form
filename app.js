@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/homes', require('./routes/homes'));
+app.use('/ccs', require('./routes/ccs'));
 
 var server = http.createServer(app);
 

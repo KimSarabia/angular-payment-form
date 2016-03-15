@@ -1,45 +1,28 @@
-'use strict';
+angular.module('ccApp', [ 'credit-cards'
+])
 
-var app = angular.module('formApp');
-
-var RegistrationController = function(){
-  var model = this;
-
-  model.message="";
-
-  model.user = {
-    username:"",
-    password:"",
-    confirmPassword:""
-  };
-  model.submit = function(isValid){
-    console.log("h");
-    if (isValid){
-      model.message = "Submitted" + model.user.username;
-
-    } else {
-      model.message = "There are still invalid fields below";
-    }
-  };
-};
-
-var compareTo = function(){
-  return{
-    require: "ngModel",
-    scope:{
-      otherModelValue: "=compareTo"
-    },
-    link: function(scope)
+.controller('UserRegisterBill', ['$scope', function($scope){
+  $scope.card = {
+    'holder_name' : '',
+    'number' : '',
+    'exp_month' : '',
+    'exp_year' : '',
+    'cvc' : ''
   }
-}
-app.controller('formCtrl', function($scope){
-  $scope.submitUserForm = function($scope){
 
-    $scope.submitUserForm = function(formInvalid){
-      if(formInvalid){
-        console.log('form invalid');
-      }else{
-        console.log('submit:',$scope.user);
-      }
-  };
+  $scope.pay = function()
+  {
+    alert(JSON.stringify($scope.card));
+  }
+
+}])
+
+.filter('yesNo', function () {
+
+  return function (boolean) {
+
+    return boolean ? 'Yes' : 'No';
+
+  }
+
 })
