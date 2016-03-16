@@ -14,11 +14,13 @@
   float: none;
   background-color: #FFFFFF;
   font-family: 'Cabin', sans-serif;
+  border-radius: 10%;
 }
 
 h1 {
   font-family: 'Pacifico', cursive;
   font-size: 2em;
+  text-align: center;
 }
 
 html {

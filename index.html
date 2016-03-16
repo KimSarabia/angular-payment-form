@@ -27,7 +27,7 @@
       <form name="paymentMethodForm" ng-submit="pay()" novalidate>
 
         <!-- CARD HOLDER -->
-        <label for="cardholder_name">NAME_ON_CARD</label>
+        <label for="cardholder_name">Name</label>
         <div class="input-group margin-bottom-sm" ng-class="{'has-success' : paymentMethodForm.cardholder_name.$valid && paymentMethodForm.cardholder_name.$dirty, 'has-error' : paymentMethodForm.cardholder_name.$invalid && !paymentMethodForm.cardholder_name.$pristine, 'has-warning' : paymentMethodForm.cardholder_name.$error.required }">
           <span class="input-group-addon"><i class="fa fa-lock"></i></span>
           <input
@@ -46,11 +46,11 @@
 
         </div>
         <p ng-show="paymentMethodForm.cardholder_name.$error.required && paymentMethodForm.cardholder_name.$dirty" class="bg-danger text-danger">
-          <span>NAME_ON_CARD</span> <span>IS_REQUIRED</span>.
+          <span>Please enter</span> <span>your name</span>.
         </p>
 
         <!-- CARD NUMBER -->
-        <label for="card_number">CARD_NUMBER</label>
+        <label for="card_number">Card Number</label>
         <div class="input-group margin-bottom-sm" ng-class="{'has-success' : paymentMethodForm.card_number.$valid && paymentMethodForm.card_number.$dirty, 'has-error' : paymentMethodForm.card_number.$invalid && !paymentMethodForm.card_number.$pristine, 'has-warning' : paymentMethodForm.card_number.$error.required }">
           <span class="input-group-addon"><i class="fa fa-lock"></i></span>
           <input
@@ -74,14 +74,14 @@
         </div>
 
         <p ng-show="paymentMethodForm.card_number.$error.required && paymentMethodForm.card_number.$dirty" class="bg-danger text-danger">
-          <span>CARD_NUMBER</span> <span>IS_REQUIRED</span>.
+          <span>Card number</span> <span>is required</span>.
         </p>
 
         <div cc-exp>
           <div class="row">
             <div class="col-md-4 col-xs-4" >
               <!-- EXP MONTH -->
-              <label for="exp_month">EXP_MONTH</label>
+              <label for="exp_month">Exp month</label>
               <div class="input-group margin-bottom-sm" ng-class="{'has-success' : paymentMethodForm.exp_month.$valid && paymentMethodForm.exp_month.$dirty, 'has-error' : paymentMethodForm.exp_month.$invalid && !paymentMethodForm.exp_month.$pristine, 'has-warning' : paymentMethodForm.exp_month.$error.required }">
 
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -110,13 +110,13 @@
               </div>
 
               <p ng-show="paymentMethodForm.exp_month.$error.required && paymentMethodForm.exp_month.$dirty" class="bg-danger text-danger">
-                <span>EXP_MONTH</span> <span>IS_REQUIRED</span>.
+                <span>Please enter</span> <span>expiration</span>.
               </p>
             </div>
 
             <div class="col-md-4 col-xs-4" >
               <!-- EXP YEAR -->
-              <label for="exp_year" >EXP_YEAR</label>
+              <label for="exp_year" >Expiration year</label>
               <div class="input-group margin-bottom-sm" ng-class="{'has-success' : paymentMethodForm.exp_year.$valid && paymentMethodForm.exp_year.$dirty, 'has-error' : paymentMethodForm.exp_year.$invalid && !paymentMethodForm.exp_year.$pristine, 'has-warning' : paymentMethodForm.exp_year.$error.required }">
 
                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -142,13 +142,13 @@
 
               </div>
               <p ng-show="paymentMethodForm.exp_year.$error.required && paymentMethodForm.exp_year.$dirty" class="bg-danger text-danger">
-                <span >EXP_YEAR</span> <span >IS_REQUIRED</span>.
+                <span >Please enter</span> <span >expiration year</span>.
               </p>
             </div>
 
             <!-- CARD CVC -->
             <div class="col-md-4 col-xs-4">
-              <label for="cvc">CARD_CVC</label>
+              <label for="cvc">CVC</label>
               <div class="input-group margin-bottom-sm" ng-class="{'has-success' : paymentMethodForm.cvc.$valid && paymentMethodForm.cvc.$dirty, 'has-error' : paymentMethodForm.cvc.$invalid && !paymentMethodForm.cvc.$pristine, 'has-warning' : paymentMethodForm.cvc.$error.required }">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                 <input
@@ -162,7 +162,7 @@
 
               </div>
               <p ng-show="paymentMethodForm.cvc.$error.required && paymentMethodForm.cvc.$dirty" class="bg-danger text-danger">
-                <span >CARD_CVC</span> <span >IS_REQUIRED</span>.
+                <span >Please enter</span> <span >card cvc</span>.
               </p>
             </div>
 
@@ -172,7 +172,7 @@
             <div class="col-md-8 col-xs-8">
               <!-- INVALID PAIR : EXP MONTH / EXP YEAR  -->
               <p ng-show="paymentMethodForm.$error.ccExp && paymentMethodForm.exp_month.$dirty && paymentMethodForm.exp_year.$dirty" class="bg-danger text-danger">
-                <span>EXP_MONTH_EXP_YEAR</span> <span>IS_INVALID</span>.
+                <span>Sorry! Expiration month and year</span> <span>invalid</span>.
               </p>
             </div>
           </div>
@@ -180,7 +180,7 @@
 
         <!-- SUBMIT BUTTON -->
         <button type="submit" class="btn btn-success pull-right" ng-disabled="paymentMethodForm.$invalid">
-          <span>PAY</span>
+          <span>Submit</span>
         </button>
 
 
